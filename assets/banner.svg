@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .grid-line { stroke: #1e293b; stroke-width: 1; opacity: 0.4; }
+    .stream-line { stroke-dasharray: 8 16; animation: streamFlow 20s linear infinite; }
+    @keyframes streamFlow {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: -400; }
+    }
+    .pulsing-orb { animation: pulseOrb 4s ease-in-out infinite alternate; }
+    @keyframes pulseOrb {
+      0% { opacity: 0.25; transform: scale(0.95); }
+      100% { opacity: 0.55; transform: scale(1.05); }
+    }
+    .status-badge { animation: badgeBlink 3s ease-in-out infinite; }
+    @keyframes badgeBlink {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 0.5; }
+    }
+    .data-packet { animation: travelData 5s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+    @keyframes travelData {
+      0% { transform: translate(0, 0); opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { transform: translate(650px, 0); opacity: 0; }
+    }
+    .title-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; }
+    .subtitle-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 400; }
+    .mono-text { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+  </style>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="360" fill="url(#bgGrad)" rx="16" />
+
+  <!-- Background Animated Ambient Orbs (Behind everything) -->
+  <g class="pulsing-orb" transform-origin="150 180">
+    <circle cx="150" cy="180" r="160" fill="#3b82f6" opacity="0.1" filter="url(#glow)" />
+  </g>
+  <g class="pulsing-orb" transform-origin="1050 140" style="animation-delay: -2s;">
+    <circle cx="1050" cy="140" r="140" fill="#06b6d4" opacity="0.12" filter="url(#glow)" />
+    <circle cx="950" cy="240" r="110" fill="#8b5cf6" opacity="0.1" filter="url(#glow)" />
+  </g>
+
+  <!-- Tech Grid Background Pattern -->
+  <g opacity="0.5">
+    <line x1="0" y1="60" x2="1200" y2="60" class="grid-line" />
+    <line x1="0" y1="120" x2="1200" y2="120" class="grid-line" />
+    <line x1="0" y1="180" x2="1200" y2="180" class="grid-line" />
+    <line x1="0" y1="240" x2="1200" y2="240" class="grid-line" />
+    <line x1="0" y1="300" x2="1200" y2="300" class="grid-line" />
+    
+    <line x1="120" y1="0" x2="120" y2="360" class="grid-line" />
+    <line x1="320" y1="0" x2="320" y2="360" class="grid-line" />
+    <line x1="520" y1="0" x2="520" y2="360" class="grid-line" />
+    <line x1="720" y1="0" x2="720" y2="360" class="grid-line" />
+    <line x1="920" y1="0" x2="920" y2="360" class="grid-line" />
+    <line x1="1120" y1="0" x2="1120" y2="360" class="grid-line" />
+  </g>
+
+  <!-- Dynamic Transaction Stream Waves (In Background) -->
+  <g opacity="0.6">
+    <path d="M -50 280 C 200 230, 400 320, 650 270 C 900 220, 1050 300, 1250 260" fill="none" stroke="url(#primaryGrad)" stroke-width="2.5" class="stream-line" />
+    <path d="M -50 310 C 250 330, 450 260, 750 310 C 1000 350, 1100 280, 1250 300" fill="none" stroke="#06b6d4" stroke-width="1.5" class="stream-line" style="animation-duration: 14s;" />
+    
+    <!-- Moving Packets -->
+    <g class="data-packet" transform="translate(100, 275)">
+      <circle cx="0" cy="0" r="4.5" fill="#10b981" filter="url(#softGlow)" />
+    </g>
+    <g class="data-packet" transform="translate(450, 285)" style="animation-delay: -2.5s;">
+      <circle cx="0" cy="0" r="4" fill="#38bdf8" filter="url(#softGlow)" />
+    </g>
+  </g>
+
+  <!-- Right Decorative Security Shield Graphic -->
+  <g transform="translate(970, 75)" opacity="0.85">
+    <polygon points="70,10 135,35 135,110 70,165 5,110 5,35" fill="none" stroke="url(#shieldGrad)" stroke-width="3" filter="url(#softGlow)" />
+    <polygon points="70,25 120,46 120,103 70,147 20,103 20,46" fill="#0f172a" fill-opacity="0.6" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4" />
+    <!-- Checkmark / Lock icon in shield -->
+    <path d="M 50 85 L 64 99 L 94 65" fill="none" stroke="#10b981" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)" />
+    
+    <!-- Rotating orbiting node -->
+    <g>
+      <circle cx="70" cy="85" r="75" fill="none" stroke="#64748b" stroke-width="1" stroke-dasharray="6 8">
+        <animateTransform attributeName="transform" type="rotate" from="0 70 85" to="360 70 85" dur="18s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="145" cy="85" r="5" fill="#3b82f6" filter="url(#softGlow)">
+        <animateTransform attributeName="transform" type="rotate" from="0 70 85" to="360 70 85" dur="18s" repeatCount="indefinite" />
+      </circle>
+    </g>
+  </g>
+
+  <!-- Foreground Content: Pill Badge -->
+  <g transform="translate(80, 52)">
+    <rect width="320" height="32" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+    <circle cx="18" cy="16" r="5" fill="#10b981" class="status-badge" />
+    <text x="32" y="21" fill="#94a3b8" class="mono-text" font-size="12" font-weight="600" letter-spacing="1">REAL-TIME INSPECTION ACTIVE</text>
+  </g>
+
+  <!-- Foreground Content: Main Header Title -->
+  <g transform="translate(80, 135)">
+    <text class="title-text" font-size="44" fill="#ffffff" letter-spacing="-0.5">
+      Awesome Real-Time
+    </text>
+    <text x="0" y="52" class="title-text" font-size="44" fill="url(#primaryGrad)" letter-spacing="-0.5">
+      Transaction Security
+    </text>
+  </g>
+
+  <!-- Foreground Content: Subtitle -->
+  <g transform="translate(80, 235)">
+    <text class="subtitle-text" font-size="16" fill="#cbd5e1" opacity="0.95">
+      Curated ecosystem of SaaS platforms &amp; open-source projects for CASB,
+    </text>
+    <text x="0" y="24" class="subtitle-text" font-size="16" fill="#cbd5e1" opacity="0.95">
+      SSPM, Zero Trust access control, eBPF runtime defense &amp; fraud detection.
+    </text>
+  </g>
+
+  <!-- Foreground Content: Tech Tag Badges -->
+  <g transform="translate(80, 290)">
+    <rect x="0" y="0" width="82" height="26" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5" />
+    <text x="14" y="17" fill="#38bdf8" class="mono-text" font-size="11" font-weight="600">CASB</text>
+
+    <rect x="94" y="0" width="82" height="26" rx="6" fill="#1e293b" stroke="#818cf8" stroke-width="1" stroke-opacity="0.5" />
+    <text x="108" y="17" fill="#818cf8" class="mono-text" font-size="11" font-weight="600">ZTNA</text>
+
+    <rect x="188" y="0" width="82" height="26" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1" stroke-opacity="0.5" />
+    <text x="202" y="17" fill="#a78bfa" class="mono-text" font-size="11" font-weight="600">SSPM</text>
+
+    <rect x="282" y="0" width="94" height="26" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1" stroke-opacity="0.5" />
+    <text x="296" y="17" fill="#34d399" class="mono-text" font-size="11" font-weight="600">eBPF-SEC</text>
+
+    <rect x="388" y="0" width="128" height="26" rx="6" fill="#1e293b" stroke="#f472b6" stroke-width="1" stroke-opacity="0.5" />
+    <text x="400" y="17" fill="#f472b6" class="mono-text" font-size="11" font-weight="600">AI FRAUD DETECT</text>
+  </g>
+</svg>

@@ -1,241 +1,156 @@
-# Awesome-Real-Time-Transaction-Security
+# Awesome Real-Time Transaction Security [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## Top Real-Time Transaction Security Ecosystem
+> A curated list of commercial SaaS products, enterprise platforms, and open-source software for **real-time transaction security**, cloud access security brokers (CASB), transaction monitoring, fraud detection, and cloud security posture management (CSPM).
 
+[![GitHub stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Real-Time-Transaction-Security?style=social&color=white)](https://github.com/ishandutta2007/Awesome-Real-Time-Transaction-Security/stargazers)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](LICENSE)
+[![Track: Cybersecurity & FinTech](https://img.shields.io/badge/Category-Cybersecurity%20%26%20FinTech-blue.svg)](#)
 
+Real-time transaction security protects cloud transactions, user interactions, API calls, SaaS data access, and digital payment rails from fraud, unauthorized exfiltration, and compliance breaches. This guide indexes market-leading SaaS platforms (ranked by company size and market valuation) and top open-source tools (ranked by GitHub stars) for engineers, SecOps teams, and cloud architects.
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
+---
 
-*Focused on Cloud Access Security, Transaction Monitoring & Self-Hosted Security Posture Platforms*  
+## Contents
 
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial real-time transaction security platforms** and **open-source projects** that monitor, analyze, and protect cloud transactions, SaaS applications, and financial payment rails — from Cloud Access Security Brokers (CASB) to cloud security posture management and transaction fraud detection.
-
-
-
-**Examples** include Salesforce Shield Transaction Security, Palo Alto Prisma Cloud, Cloudflare Access, Zscaler Private Access, Netskope Cloud CASB, Microsoft Defender for Cloud Apps, AppOmni, Adaptive Shield, Wing Security, and Bitglass (the category leaders).
-
-
-
-**Open-source emphasis**: Real-time transaction security is a maturing open-source domain with strong foundations in cloud security posture management and log analysis. **Prowler** leads with 553 AWS checks, 138 Azure checks, 77 GCP checks, and 83 Kubernetes checks across 30+ compliance frameworks. **Kubescape** brings CNCF-incubating Kubernetes security with eBPF runtime analysis. **Clouditor** delivers continuous cloud assurance with 60+ checks for AWS, Azure, and OpenStack. **Wazuh** provides SIEM and XDR capabilities with comprehensive log analysis. **Security Onion** bundles network security monitoring tools for threat hunting. **Zeek** offers network transaction logging for forensic analysis. **FinSight AI** demonstrates LLM-powered transaction fraud screening with MongoDB and rule-based risk scoring.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
+- [Market Landscape & Overview](#market-landscape--overview)
+- [Commercial SaaS & Enterprise Platforms](#commercial-saas--enterprise-platforms)
+- [Open-Source Projects](#open-source-projects)
+- [Architecture & Integration Recipes](#architecture--integration-recipes)
 - [How to Contribute](#how-to-contribute)
+- [Disclaimer & Regulatory Notes](#disclaimer--regulatory-notes)
 
-- [Disclaimer](#disclaimer)
+---
 
+## Market Landscape & Overview
 
+> **Market Size & Structure**: The global Cloud Access Security Broker (CASB) and cloud transaction monitoring market is estimated at **$13.9 billion in 2026** and projected to reach **$70.3 billion by 2034 (22.0% CAGR)**; the sector is **moderately fragmented**, with hyperscalers and SSE consolidators coexisting with specialized SSPM and fraud prevention vendors rather than a single winner-take-all monopoly.
 
-## SaaS/Hosted Platforms
+Real-time transaction monitoring and access security have transitioned from batch log auditing to inline inspection and automated risk scoring:
+- **Zero Trust Network Access (ZTNA) & CASB**: Identity-aware proxies enforce granular contextual policies on every cloud API call and transaction.
+- **SaaS Security Posture Management (SSPM)**: Continuous detection of misconfigurations, privilege escalation, and token leakage across SaaS estates.
+- **Runtime & Payment Rail Monitoring**: eBPF-powered container runtime security and streaming AI risk scoring for financial and cloud workloads.
 
+---
 
+## Commercial SaaS & Enterprise Platforms
 
-- **[Salesforce Shield Transaction Security](https://www.salesforce.com/)**  
+The table below lists the top commercial platforms delivering real-time transaction security, CASB, ZTNA, and SSPM. Entries are sorted in **descending order by company size** (market capitalization or latest enterprise valuation).
 
-  **Salesforce's native transaction security** — real-time monitoring of user activity, API calls, and data access with policy-based enforcement. **Best for Salesforce customers** .
+| Platform | Primary Focus | Starting Pricing | Free Tier / Trial Limit | Company Valuation / Revenue |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Microsoft Defender for Cloud Apps](https://www.microsoft.com/en-us/security/business/cloud-apps-defender)** | CASB, SaaS discovery, and real-time transaction threat protection | $3.50 per user/month (or bundled in Microsoft 365 E5) | 30-day free trial (up to 25 user licenses in M365 tenant) | ~$3.95T Market Cap |
+| **[Palo Alto Prisma Cloud](https://www.paloaltonetworks.com/prisma/cloud)** | CNAPP, cloud security posture & transaction workload defense | ~$640 per credit (~$18,000/yr starting CSPM allocation) | 30-day free trial (cloud account onboarding & scan limits) | ~$335B Market Cap |
+| **[Salesforce Shield Transaction Security](https://www.salesforce.com/)** | Native CRM transaction policies, real-time API event monitoring | ~10% of Salesforce net spend for Event Monitoring (or 30% for full Shield bundle) | Free forever in Developer Edition orgs (production requires paid add-on) | ~$188B Market Cap |
+| **[Cloudflare Access](https://www.cloudflare.com/zero-trust/products/access/)** | Zero Trust access control, identity-aware proxy & API protection | $7.00 per user/month (Pay-as-you-go) | Free forever up to 50 users (24-hour log retention, 2 CASB integrations) | ~$125B Market Cap |
+| **[Zscaler Private Access](https://www.zscaler.com/products/zscaler-private-access)** | Zero Trust Network Access (ZTNA) & secure transaction isolation | ~$6.00 to $10.00 per user/month (~$140 to $375/user/year) | 7-day hosted interactive demo / guided sales POC | ~$36B Market Cap |
+| **[Netskope Cloud CASB](https://www.netskope.com/)** | Cloud Access Security Broker, inline DLP & API security | ~$4.00 to $8.00 per user/month (Base CASB/SWG tier) | Guided hands-on lab test drive / 30-day enterprise POC | ~$7.2B Valuation ($709M FY26 Revenue) |
+| **[Forcepoint ONE (formerly Bitglass)](https://www.forcepoint.com/)** | Unified SSE, CASB reverse proxy & data protection | ~$55.00 per user/year (~$4.58 per user/month; min 100-500 seats) | 14-day assisted trial / customized proof-of-concept | ~$2.45B Valuation (Francisco Partners portfolio) |
+| **[AppOmni](https://appomni.com/)** | SaaS Security Posture Management (SSPM) & data leak prevention | ~$7,500/year per block of 100 users per SaaS application | Free community scanner tools / 90-day promotional pilot for Foundations tier | ~$515M Valuation |
+| **[Adaptive Shield (CrowdStrike)](https://www.adaptiveshield.com/)** | SSPM, SaaS misconfiguration & identity risk management | Custom enterprise tier via CrowdStrike Falcon | 15-day free trial (no credit card required, posture checks included) | ~$300M Acquisition Valuation |
+| **[Wing Security](https://www.wing.security/)** | SaaS shadow IT discovery, automated SSPM & token risk posture | $1,500/year (Compliance tier; Enterprise custom) | Free forever SaaS Pulse discovery tier (basic application risk scan) | ~$29.5M Valuation ($26M total funding) |
 
+---
 
+## Open-Source Projects
 
-- **[Palo Alto Prisma Cloud](https://www.paloaltonetworks.com/prisma/cloud)**  
+Top open-source security projects for transaction logging, cloud posture auditing, SIEM log analysis, and runtime transaction inspection. Projects are **sorted by GitHub star count (descending)**.
 
-  **Comprehensive CNAPP platform** — cloud security posture management, workload protection, and compliance across multi-cloud environments. **Best for large enterprises** .
-
-
-
-- **[Cloudflare Access](https://www.cloudflare.com/zero-trust/products/access/)**  
-
-  **Zero Trust access control** — identity-aware proxy for securing internal applications and APIs. **Best for modern zero-trust architectures** .
-
-
-
-- **[Zscaler Private Access](https://www.zscaler.com/products/zscaler-private-access)**  
-
-  **The market-leading ZTNA platform** — zero trust access to private apps without VPN. **Best for enterprise private access** .
-
-
-
-- **[Netskope Cloud CASB](https://www.netskope.com/)**  
-
-  **Cloud Access Security Broker** — inline and API-based protection for SaaS and IaaS with DLP and threat protection. **Best for data-centric cloud security** .
-
-
-
-- **[Microsoft Defender for Cloud Apps](https://www.microsoft.com/en-us/security/business/cloud-apps-defender)**  
-
-  **Microsoft's CASB** — cloud app discovery, data protection, and threat detection integrated with Microsoft 365. **Best for Microsoft-centric organizations** .
-
-
-
-- **[AppOmni](https://appomni.com/)**  
-
-  **SaaS security posture management (SSPM)** — continuous monitoring and configuration assessment for SaaS applications. **Best for enterprise SaaS security** .
-
-
-
-- **[Adaptive Shield](https://www.adaptiveshield.com/)**  
-
-  **SaaS security posture management** — misconfiguration detection and remediation. **Best for SSPM** .
-
-
-
-- **[Wing Security](https://www.wing.security/)**  
-
-  **SaaS security platform** — discovery, posture management, and shadow IT detection. **Best for SaaS security automation** .
-
-
-
-- **[Bitglass](https://www.bitglass.com/)**  
-
-  **Cloud Access Security Broker** — data protection and threat protection for cloud and mobile. **Best for cloud-first organizations** .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Cloud Security Posture Management
-
-
-
-- **[Prowler](https://github.com/prowler-cloud/prowler)** [![GitHub stars](https://img.shields.io/github/stars/prowler-cloud/prowler?style=social&color=white)](https://github.com/prowler-cloud/prowler/stargazers)  
-
-  **The leading open-source cloud security assessment tool**, Apache-2.0 licensed . **553 AWS checks, 138 Azure checks, 77 GCP checks, and 83 Kubernetes checks** across 30+ compliance frameworks including CIS, NIST 800, NIST CSF, CISA, RBI, FedRAMP, PCI-DSS, GDPR, HIPAA, FFIEC, SOC2, GXP, AWS Well-Architected Framework Security Pillar, and ENS . **CLI with dashboard, Docker Compose deployment, and Prowler App web interface** . **Install via pip or containers** . **Best for comprehensive multi-cloud security assessment** .
-
-
-
-- **[Clouditor](https://github.com/clouditor/clouditor)** [![GitHub stars](https://img.shields.io/github/stars/clouditor/clouditor?style=social&color=white)](https://github.com/clouditor/clouditor/stargazers)  
-
-  **Open-source tool supporting continuous cloud assurance**, Apache-2.0 licensed . **Continuously evaluates if cloud-based applications (AWS, Azure, OpenStack) are configured securely and comply with security requirements** . **60+ checks for AWS, Azure, and OpenStack** with results evaluated against BSI C5 and CSA CCM frameworks . **Cloud Compliance Language (CCL)** for descriptive custom rule development . **Automated service discovery** for quick integration with existing services . **Best for continuous cloud compliance monitoring** .
-
-
-
-- **[ScoutSuite](https://github.com/nccgroup/ScoutSuite)** [![GitHub stars](https://img.shields.io/github/stars/nccgroup/ScoutSuite?style=social&color=white)](https://github.com/nccgroup/ScoutSuite/stargazers)  
-
-  **Multi-cloud security auditing tool from NCC Group**, GPL-2.0 licensed . **Audits AWS, Azure, GCP, Alibaba Cloud, and Oracle Cloud** . **HTML report output with security findings** . **Best for multi-cloud security audits** .
-
-
-
-### Kubernetes & Container Security
-
-
-
-- **[Kubescape](https://github.com/kubescape/kubescape)** [![GitHub stars](https://img.shields.io/github/stars/kubescape/kubescape?style=social&color=white)](https://github.com/kubescape/kubescape/stargazers)  
-
-  **CNCF-incubating Kubernetes security platform**, Apache-2.0 licensed . **Comprehensive security coverage from development to runtime** — hardening, posture management, and runtime security . **Scans clusters, YAML files, and Helm charts** against NSA-CISA, MITRE ATT&CK, and CIS Benchmark frameworks . **In-cluster mode via Helm chart** provides continuous scanning, image vulnerability scanning, runtime analysis, and network policy generation . **Uses Open Policy Agent for posture controls, Grype for image scanning, and eBPF via Inspektor Gadget** . **Best for Kubernetes security posture management** .
-
-
-
-### Log Management & SIEM
-
-
+- **[Trivy](https://github.com/aquasecurity/trivy)** [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers)  
+  *Comprehensive security scanner for container images, file systems, Git repositories, virtual machine images, and Kubernetes configurations.* Apache-2.0 licensed. Best for vulnerability and misconfiguration scanning in containerized deployment pipelines.
 
 - **[Wazuh](https://github.com/wazuh/wazuh)** [![GitHub stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers)  
+  *Unified SIEM and XDR platform providing real-time security log analysis, integrity monitoring, vulnerability detection, and regulatory compliance.* GPL-2.0 licensed. Features dedicated Indexer, Server, Agent, and Dashboard components. Best for comprehensive on-premise and cloud SIEM.
 
-  **The most complete open-source SIEM platform**, GPLv2 licensed with **4.4-star Gartner ratings** . **Native security log analysis, vulnerability detection, security configuration assessment, and regulatory compliance reports** . **Four components**: Indexer (OpenSearch-based), Server, Dashboard, and Agent . **Strongest in unified treatment of all requirement areas** — collection and automated responses via agent, centralized detection on server . **Best for comprehensive open-source SIEM** .
-
-
+- **[Prowler](https://github.com/prowler-cloud/prowler)** [![GitHub stars](https://img.shields.io/github/stars/prowler-cloud/prowler?style=social&color=white)](https://github.com/prowler-cloud/prowler/stargazers)  
+  *Open-source cloud security assessment tool supporting AWS, Azure, GCP, and Kubernetes.* Apache-2.0 licensed. Ships with 800+ checks mapped against 30+ compliance frameworks (PCI-DSS, CIS, NIST 800, FedRAMP, SOC2). Best for multi-cloud security posture management (CSPM).
 
 - **[OpenSearch](https://github.com/opensearch-project/OpenSearch)** [![GitHub stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers)  
+  *Community-driven search and analytics suite equipped with Security Analytics detectors for real-time threat detection and forensic correlation.* Apache-2.0 licensed. Best for high-throughput security event and transaction log search.
 
-  **Open-source fork of Elasticsearch and Kibana**, Apache-2.0 licensed . **Security Analytics functions for real-time threat detection** . **Components**: OpenSearch (storage/analysis), OpenSearch Dashboards (visualization), and Data Prepper (data collection) . **Fully free with commercial use permitted under Apache 2.0** . **Best for search and log analytics** .
+- **[Kubescape](https://github.com/kubescape/kubescape)** [![GitHub stars](https://img.shields.io/github/stars/kubescape/kubescape?style=social&color=white)](https://github.com/kubescape/kubescape/stargazers)  
+  *CNCF-incubating Kubernetes security platform.* Apache-2.0 licensed. Provides posture assessment, automated risk analysis, and eBPF-driven runtime threat detection against NSA-CISA and MITRE ATT&CK benchmarks. Best for Kubernetes cluster posture and runtime security.
 
+- **[Falco](https://github.com/falcosecurity/falco)** [![GitHub stars](https://img.shields.io/github/stars/falcosecurity/falco?style=social&color=white)](https://github.com/falcosecurity/falco/stargazers)  
+  *CNCF-graduated cloud-native runtime security monitor.* Apache-2.0 licensed. Uses kernel tracing and eBPF to detect abnormal application behavior, suspicious syscalls, and privilege escalation in real time. Best for cloud-native runtime transaction auditing.
 
+- **[Checkov](https://github.com/bridgecrewio/checkov)** [![GitHub stars](https://img.shields.io/github/stars/bridgecrewio/checkov?style=social&color=white)](https://github.com/bridgecrewio/checkov/stargazers)  
+  *Static code analysis tool for Infrastructure as Code (IaC).* Apache-2.0 licensed. Audits Terraform, CloudFormation, Kubernetes, Helm, and ARM templates for security and compliance misconfigurations prior to provisioning.
 
-- **[Security Onion](https://github.com/Security-Onion-Solutions/securityonion)** [![GitHub stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers)  
-
-  **Free and open platform for threat hunting and network security monitoring**, Elastic License 2.0 . **Bundles Suricata, Zeek, ElasticSearch, and other FOSS tools** . **Network and host monitoring, honeypots, log management, and case management** . **Commercial use permitted but not as hosted/managed service** . **Best for network security monitoring and threat hunting** .
-
-
-
-### Network Transaction Logging
-
-
+- **[kube-bench](https://github.com/aquasecurity/kube-bench)** [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/kube-bench?style=social&color=white)](https://github.com/aquasecurity/kube-bench/stargazers)  
+  *Automated CIS Kubernetes Benchmark assessment tool.* Apache-2.0 licensed. Verifies whether Kubernetes clusters are deployed in accordance with CIS security best practices.
 
 - **[Zeek](https://github.com/zeek/zeek)** [![GitHub stars](https://img.shields.io/github/stars/zeek/zeek?style=social&color=white)](https://github.com/zeek/zeek/stargazers)  
+  *Deep network analysis framework and network transaction logging platform.* BSD-3-Clause licensed. Translates raw network packets into structured application-layer transaction events (HTTP, DNS, SSL/TLS) for forensic analysis and real-time anomaly detection.
 
-  **Network security monitor and transaction logging framework**, BSD-3-Clause licensed . **Watches live network traffic and generates transaction logs** for near-real-time insights into network usage patterns . **Analysts pivot from IDS alerts to Zeek logs for incident detection** — logs stored off-device preserve forensic integrity . **Extracted file contents and comprehensive protocol logs** . **Best for network transaction analysis and forensics** .
+- **[ScoutSuite](https://github.com/nccgroup/ScoutSuite)** [![GitHub stars](https://img.shields.io/github/stars/nccgroup/ScoutSuite?style=social&color=white)](https://github.com/nccgroup/ScoutSuite/stargazers)  
+  *Multi-cloud security auditing tool from NCC Group.* GPL-2.0 licensed. Inspects AWS, Azure, GCP, Alibaba Cloud, and Oracle Cloud environments using public cloud APIs, generating interactive HTML vulnerability reports.
 
+- **[Suricata](https://github.com/OISF/suricata)** [![GitHub stars](https://img.shields.io/github/stars/OISF/suricata?style=social&color=white)](https://github.com/OISF/suricata/stargazers)  
+  *High-performance Network IDS, IPS, and Network Security Monitoring engine.* GPL-2.0 licensed. Delivers real-time packet inspection, multi-threaded wire speed analysis, and automatic rule-based threat mitigation.
 
+- **[Tetragon](https://github.com/cilium/tetragon)** [![GitHub stars](https://img.shields.io/github/stars/cilium/tetragon?style=social&color=white)](https://github.com/cilium/tetragon/stargazers)  
+  *eBPF-based security observability and real-time runtime enforcement tool.* Apache-2.0 licensed. Intercepts kernel namespaces, capabilities, and system calls to block malicious processes synchronously without user-space latency.
 
-### AI-Powered Transaction Analysis
+- **[DefectDojo](https://github.com/DefectDojo/django-DefectDojo)** [![GitHub stars](https://img.shields.io/github/stars/DefectDojo/django-DefectDojo)](https://github.com/DefectDojo/django-DefectDojo/stargazers)  
+  *Open-source DevSecOps orchestration and vulnerability management platform.* BSD-3-Clause licensed. Normalizes findings across 150+ security scanners to track remediation pipelines and audit readiness.
 
+- **[Security Onion](https://github.com/Security-Onion-Solutions/securityonion)** [![GitHub stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers)  
+  *Integrated Linux distribution for threat hunting, enterprise security monitoring, and log management.* Elastic License 2.0. Bundles Suricata, Zeek, Wazuh, and OpenSearch with unified analyst web interfaces.
 
+- **[Security Monkey](https://github.com/Netflix/security_monkey)** [![GitHub stars](https://img.shields.io/github/stars/Netflix/security_monkey?style=social&color=white)](https://github.com/Netflix/security_monkey/stargazers)  
+  *Legacy policy monitoring and change auditing architecture from Netflix.* Apache-2.0 licensed. Continuously tracks AWS/GCP policy modifications and insecure changes over time.
+
+- **[Cartography](https://github.com/lyft/cartography)** [![GitHub stars](https://img.shields.io/github/stars/lyft/cartography?style=social&color=white)](https://github.com/lyft/cartography/stargazers)  
+  *Graph-based asset discovery and relationship mapping tool from Lyft.* Apache-2.0 licensed. Ingests infrastructure assets into Neo4j to illustrate complex attack paths and multi-hop transactional access risks.
+
+- **[CloudSploit](https://github.com/aquasecurity/cloudsploit)** [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/cloudsploit?style=social&color=white)](https://github.com/aquasecurity/cloudsploit/stargazers)  
+  *Cloud security posture and configuration scanner for AWS, Azure, GCP, and Oracle Cloud.* BSD-3-Clause licensed. Identifies misconfigurations and unauthorized public exposures.
+
+- **[RITA (Real Intelligence Threat Analytics)](https://github.com/activecm/rita)** [![GitHub stars](https://img.shields.io/github/stars/activecm/rita?style=social&color=white)](https://github.com/activecm/rita/stargazers)  
+  *Open-source network traffic analysis framework for detecting command and control (C2) communication.* LGPL-3.0 licensed. Parses Zeek transaction logs to uncover beaconing behavior and DNS tunneling.
+
+- **[Clouditor](https://github.com/clouditor/clouditor)** [![GitHub stars](https://img.shields.io/github/stars/clouditor/clouditor?style=social&color=white)](https://github.com/clouditor/clouditor/stargazers)  
+  *Continuous cloud assurance and automated compliance engine.* Apache-2.0 licensed. Features Cloud Compliance Language (CCL) to evaluate multi-cloud workloads against BSI C5 and CSA CCM frameworks.
 
 - **[FinSight AI](https://github.com/AwaisRehman/finsight-ai)** [![GitHub stars](https://img.shields.io/github/stars/AwaisRehman/finsight-ai?style=social&color=white)](https://github.com/AwaisRehman/finsight-ai/stargazers)  
+  *AI-powered financial transaction monitoring and analytics dashboard.* MIT licensed. Integrates MongoDB Atlas transaction streaming with LLaMA 3.3 70B for conversational transaction fraud screening and rule-based risk evaluation.
 
-  **Real-time AI-powered financial analytics dashboard**, MIT licensed . **Combines MongoDB Atlas transaction store with LLaMA 3.3 70B via Groq** for natural-language financial Q&A grounded in real transaction data . **Rule-based risk scoring per transaction (0-100)** with amount and recipient heuristics flagging entries at threshold 40 . **AI-powered explanations of flags on demand** . **Portfolio risk scoring and revenue trend forecasting** . **Built entirely with free-tier services** — React 18, Node.js/Express, JWT + Google OAuth 2.0 . **Dashboard loads in under 800ms; AI analyses in 1.5-3s on free-tier database** . **Best for conversational transaction fraud screening** .
+---
 
+## Architecture & Integration Recipes
 
+To build a modular self-hosted transaction security stack:
 
-### Additional Strong Open-Source Options
+```mermaid
+flowchart LR
+    A["Inbound Transactions & APIs"] --> B["Identity & Access Proxy\n(Cloudflare Access / ZTNA)"]
+    B --> C["Inline Inspection & Enforcement\n(Tetragon / Falco / Zeek)"]
+    C --> D["SIEM & Anomaly Correlation\n(Wazuh / OpenSearch)"]
+    D --> E["Real-Time Fraud & Alert Scoring\n(FinSight AI / Rule Engine)"]
+    subgraph CSPM & SSPM Auditing
+        F["Prowler / Kubescape / Trivy"] --> G["Infrastructure & Cloud State"]
+    end
+```
 
+1. **Ingress & Proxy Layer**: Utilize [Cloudflare Access](https://www.cloudflare.com/zero-trust/products/access/) or identity-aware proxies to enforce strict mutual TLS and token validation on all transaction endpoints.
+2. **Kernel & Network Wire Inspection**: Deploy [Tetragon](https://github.com/cilium/tetragon) and [Zeek](https://github.com/zeek/zeek) to capture system calls and application-level transaction records in real time.
+3. **Log Ingestion & SIEM Correlation**: Pipe transaction logs into [Wazuh](https://github.com/wazuh/wazuh) or [OpenSearch](https://github.com/opensearch-project/OpenSearch) to detect anomalous transaction bursts, credential stuffing, and unauthorized data queries.
+4. **Continuous Posture Auditing**: Schedule [Prowler](https://github.com/prowler-cloud/prowler) and [Kubescape](https://github.com/kubescape/kubescape) to enforce compliance standards (PCI-DSS, SOC 2, ISO 27001).
 
-
-- **trivy** — Container and IaC vulnerability scanner. **Best for container security scanning** .
-
-- **Checkov** — IaC security scanning for Terraform, CloudFormation, and Kubernetes. **Best for IaC security assessment** .
-
-- **tfsec** — Terraform security scanner. **Best for Terraform security assessment** .
-
-- **kube-bench** — Kubernetes CIS Benchmark checks. **Best for Kubernetes security assessment** .
-
-- **CloudSploit** — Cloud security scanner (acquired by Aqua Security) for misconfiguration detection. **Best for cloud misconfiguration detection** .
-
-- **Cartography** — Graph-based cloud infrastructure security analysis. **Best for graph-based security analysis** .
-
-- **RITA** — Real Intelligence Threat Analytics for C2 detection through network traffic analysis. **Best for network threat detection** .
-
-
-
-**Frameworks for building custom real-time transaction security solutions**: Combine **Prowler** for comprehensive multi-cloud security assessment with 30+ compliance frameworks . Use **Kubescape** for Kubernetes runtime threat detection with eBPF . Deploy **Wazuh** for SIEM with native log analysis and compliance reporting . Integrate **Zeek** for network transaction logging and forensic analysis . Use **FinSight AI** for LLM-powered transaction fraud screening with rule-based risk scoring . Build on **Clouditor** for continuous cloud compliance monitoring with custom rules . Note that true enterprise real-time transaction security with inline CASB enforcement, real-time policy-based transaction blocking, and vendor-supported SLAs (Netskope, Zscaler, Prisma Cloud) remains primarily commercial territory; open-source stacks provide strong cloud posture assessment, log analysis, and network transaction logging foundations that require integration for complete real-time transaction security operations.
-
-
+---
 
 ## How to Contribute
 
+Contributions are warmly welcomed! To suggest a product or open-source tool:
 
+1. Fork this repository.
+2. Ensure entries conform to formatting standards (include exact pricing/trial bounds for SaaS, and valid star badge URLs for open source).
+3. Open a Pull Request detailing the product's primary transaction security or posture capabilities.
 
-1. Fork the repo.
+---
 
-2. Add/edit entries in `README.md` (follow existing format).
+## Disclaimer & Regulatory Notes
 
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Real-time transaction security platforms handle sensitive financial and operational data and must comply with financial regulations (PCI-DSS, SOX), data privacy regulations (GDPR, CCPA), and industry-specific compliance standards. Self-hosted solutions require proper security hardening, access controls, and compliance with data privacy regulations.
-
-- **Cloud Access Security Broker (CASB) market** was estimated at $13.9 billion in 2026 and is forecast to reach $70.3 billion by 2034, growing at 22.0% CAGR . North America held 36.60% of 2025 revenue, while Asia Pacific is the fastest-growing region at 19.15% CAGR . The sector is **moderately fragmented** — standalone CASB is being absorbed into SASE/SSE platforms from Netskope, Zscaler, Palo Alto, and Microsoft, but no single vendor dominates .
-
-- **Transaction monitoring requires real-time capabilities** — Visa's A2A Protect demonstrates that real-time risk insights can reduce over 50% more fraud while cutting false alerts by over 40% . Open-source alternatives like Prowler and Wazuh provide strong assessment and detection but may lack the inline enforcement of commercial CASB platforms.
-
-- **License considerations**: Prowler uses Apache-2.0 , Clouditor uses Apache-2.0 , Kubescape uses Apache-2.0 , Wazuh uses GPLv2 , OpenSearch uses Apache-2.0 , Security Onion uses Elastic License 2.0 (commercial use permitted but not as hosted service) , Zeek uses BSD-3-Clause , and FinSight AI uses MIT . Verify licensing against your use case before committing.
-
-- The open-source ecosystem provides strong cloud posture assessment, log analysis, and network transaction logging foundations, but **inline CASB enforcement, real-time transaction blocking, and vendor-supported SLAs** remain primarily commercial offerings.
+- **Compliance Standards**: Real-time transaction platforms operate under strict regulatory standards (e.g., PCI-DSS for payment cards, SOX for corporate financial systems, and GDPR/CCPA for personally identifiable data).
+- **Enforcement Boundaries**: Open-source tools excel at continuous posture assessment, forensic packet capture, and telemetry analysis. For guaranteed inline latency SLAs and turnkey CASB policy blocking across thousands of unmanaged SaaS apps, commercial SSE suites remain prevalent.
+- **Verification**: Pricing tiers, trial conditions, and company valuations reflect market data as of October 2026. Always confirm active quotes directly with respective providers.

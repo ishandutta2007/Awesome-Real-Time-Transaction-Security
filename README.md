@@ -8,7 +8,7 @@
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome Track" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Real-Time-Transaction-Security/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Real-Time-Transaction-Security?style=social&color=white" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Real-Time-Transaction-Security/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Real-Time-Transaction-Security?style=social&color=white" alt="GitHub_Stars" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" alt="License" /></a>
   <a href="#"><img src="https://img.shields.io/badge/Category-Cybersecurity%20%26%20FinTech-blue.svg" alt="Category" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -65,66 +65,66 @@ The table below lists the top commercial platforms delivering real-time transact
 
 ## 🔓 Open-Source Projects
 
-Top open-source security projects for transaction logging, cloud posture auditing, SIEM log analysis, and runtime transaction inspection. Projects are **sorted by GitHub star count (descending)**.
+Top open-source security projects for transaction logging, cloud posture auditing, SIEM log analysis, and runtime transaction inspection. Projects are **sorted by GitHub Stars_Count (descending)**.
 
-- **[Trivy](https://github.com/aquasecurity/trivy)** [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers)  
+- **[Trivy](https://github.com/aquasecurity/trivy)** [![GitHub_Stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers)  
   *Comprehensive security scanner for container images, file systems, Git repositories, virtual machine images, and Kubernetes configurations.* Apache-2.0 licensed. Best for vulnerability and misconfiguration scanning in containerized deployment pipelines. 🐳
 
-- **[Wazuh](https://github.com/wazuh/wazuh)** [![GitHub stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers)  
+- **[Wazuh](https://github.com/wazuh/wazuh)** [![GitHub_Stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers)  
   *Unified SIEM and XDR platform providing real-time security log analysis, integrity monitoring, vulnerability detection, and regulatory compliance.* GPL-2.0 licensed. Features dedicated Indexer, Server, Agent, and Dashboard components. Best for comprehensive on-premise and cloud SIEM. 🔎
 
-- **[Prowler](https://github.com/prowler-cloud/prowler)** [![GitHub stars](https://img.shields.io/github/stars/prowler-cloud/prowler?style=social&color=white)](https://github.com/prowler-cloud/prowler/stargazers)  
+- **[Prowler](https://github.com/prowler-cloud/prowler)** [![GitHub_Stars](https://img.shields.io/github/stars/prowler-cloud/prowler?style=social&color=white)](https://github.com/prowler-cloud/prowler/stargazers)  
   *Open-source cloud security assessment tool supporting AWS, Azure, GCP, and Kubernetes.* Apache-2.0 licensed. Ships with 800+ checks mapped against 30+ compliance frameworks (PCI-DSS, CIS, NIST 800, FedRAMP, SOC2). Best for multi-cloud security posture management (CSPM). ☁️
 
-- **[OpenSearch](https://github.com/opensearch-project/OpenSearch)** [![GitHub stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers)  
+- **[OpenSearch](https://github.com/opensearch-project/OpenSearch)** [![GitHub_Stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers)  
   *Community-driven search and analytics suite equipped with Security Analytics detectors for real-time threat detection and forensic correlation.* Apache-2.0 licensed. Best for high-throughput security event and transaction log search. 🔍
 
-- **[Kubescape](https://github.com/kubescape/kubescape)** [![GitHub stars](https://img.shields.io/github/stars/kubescape/kubescape?style=social&color=white)](https://github.com/kubescape/kubescape/stargazers)  
+- **[Kubescape](https://github.com/kubescape/kubescape)** [![GitHub_Stars](https://img.shields.io/github/stars/kubescape/kubescape?style=social&color=white)](https://github.com/kubescape/kubescape/stargazers)  
   *CNCF-incubating Kubernetes security platform.* Apache-2.0 licensed. Provides posture assessment, automated risk analysis, and eBPF-driven runtime threat detection against NSA-CISA and MITRE ATT&CK benchmarks. Best for Kubernetes cluster posture and runtime security. ☸️
 
-- **[Falco](https://github.com/falcosecurity/falco)** [![GitHub stars](https://img.shields.io/github/stars/falcosecurity/falco?style=social&color=white)](https://github.com/falcosecurity/falco/stargazers)  
+- **[Falco](https://github.com/falcosecurity/falco)** [![GitHub_Stars](https://img.shields.io/github/stars/falcosecurity/falco?style=social&color=white)](https://github.com/falcosecurity/falco/stargazers)  
   *CNCF-graduated cloud-native runtime security monitor.* Apache-2.0 licensed. Uses kernel tracing and eBPF to detect abnormal application behavior, suspicious syscalls, and privilege escalation in real time. Best for cloud-native runtime transaction auditing. 🦅
 
-- **[Checkov](https://github.com/bridgecrewio/checkov)** [![GitHub stars](https://img.shields.io/github/stars/bridgecrewio/checkov?style=social&color=white)](https://github.com/bridgecrewio/checkov/stargazers)  
+- **[Checkov](https://github.com/bridgecrewio/checkov)** [![GitHub_Stars](https://img.shields.io/github/stars/bridgecrewio/checkov?style=social&color=white)](https://github.com/bridgecrewio/checkov/stargazers)  
   *Static code analysis tool for Infrastructure as Code (IaC).* Apache-2.0 licensed. Audits Terraform, CloudFormation, Kubernetes, Helm, and ARM templates for security and compliance misconfigurations prior to provisioning. ✅
 
-- **[kube-bench](https://github.com/aquasecurity/kube-bench)** [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/kube-bench?style=social&color=white)](https://github.com/aquasecurity/kube-bench/stargazers)  
+- **[kube-bench](https://github.com/aquasecurity/kube-bench)** [![GitHub_Stars](https://img.shields.io/github/stars/aquasecurity/kube-bench?style=social&color=white)](https://github.com/aquasecurity/kube-bench/stargazers)  
   *Automated CIS Kubernetes Benchmark assessment tool.* Apache-2.0 licensed. Verifies whether Kubernetes clusters are deployed in accordance with CIS security best practices. 📏
 
-- **[Zeek](https://github.com/zeek/zeek)** [![GitHub stars](https://img.shields.io/github/stars/zeek/zeek?style=social&color=white)](https://github.com/zeek/zeek/stargazers)  
+- **[Zeek](https://github.com/zeek/zeek)** [![GitHub_Stars](https://img.shields.io/github/stars/zeek/zeek?style=social&color=white)](https://github.com/zeek/zeek/stargazers)  
   *Deep network analysis framework and network transaction logging platform.* BSD-3-Clause licensed. Translates raw network packets into structured application-layer transaction events (HTTP, DNS, SSL/TLS) for forensic analysis and real-time anomaly detection. 🌐
 
-- **[ScoutSuite](https://github.com/nccgroup/ScoutSuite)** [![GitHub stars](https://img.shields.io/github/stars/nccgroup/ScoutSuite?style=social&color=white)](https://github.com/nccgroup/ScoutSuite/stargazers)  
+- **[ScoutSuite](https://github.com/nccgroup/ScoutSuite)** [![GitHub_Stars](https://img.shields.io/github/stars/nccgroup/ScoutSuite?style=social&color=white)](https://github.com/nccgroup/ScoutSuite/stargazers)  
   *Multi-cloud security auditing tool from NCC Group.* GPL-2.0 licensed. Inspects AWS, Azure, GCP, Alibaba Cloud, and Oracle Cloud environments using public cloud APIs, generating interactive HTML vulnerability reports. 🧭
 
-- **[Suricata](https://github.com/OISF/suricata)** [![GitHub stars](https://img.shields.io/github/stars/OISF/suricata?style=social&color=white)](https://github.com/OISF/suricata/stargazers)  
+- **[Suricata](https://github.com/OISF/suricata)** [![GitHub_Stars](https://img.shields.io/github/stars/OISF/suricata?style=social&color=white)](https://github.com/OISF/suricata/stargazers)  
   *High-performance Network IDS, IPS, and Network Security Monitoring engine.* GPL-2.0 licensed. Delivers real-time packet inspection, multi-threaded wire speed analysis, and automatic rule-based threat mitigation. 🚨
 
-- **[Tetragon](https://github.com/cilium/tetragon)** [![GitHub stars](https://img.shields.io/github/stars/cilium/tetragon?style=social&color=white)](https://github.com/cilium/tetragon/stargazers)  
+- **[Tetragon](https://github.com/cilium/tetragon)** [![GitHub_Stars](https://img.shields.io/github/stars/cilium/tetragon?style=social&color=white)](https://github.com/cilium/tetragon/stargazers)  
   *eBPF-based security observability and real-time runtime enforcement tool.* Apache-2.0 licensed. Intercepts kernel namespaces, capabilities, and system calls to block malicious processes synchronously without user-space latency. ⚡
 
-- **[DefectDojo](https://github.com/DefectDojo/django-DefectDojo)** [![GitHub stars](https://img.shields.io/github/stars/DefectDojo/django-DefectDojo?style=social&color=white)](https://github.com/DefectDojo/django-DefectDojo/stargazers)  
+- **[DefectDojo](https://github.com/DefectDojo/django-DefectDojo)** [![GitHub_Stars](https://img.shields.io/github/stars/DefectDojo/django-DefectDojo?style=social&color=white)](https://github.com/DefectDojo/django-DefectDojo/stargazers)  
   *Open-source DevSecOps orchestration and vulnerability management platform.* BSD-3-Clause licensed. Normalizes findings across 150+ security scanners to track remediation pipelines and audit readiness. 🥋
 
-- **[Security Onion](https://github.com/Security-Onion-Solutions/securityonion)** [![GitHub stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers)  
+- **[Security Onion](https://github.com/Security-Onion-Solutions/securityonion)** [![GitHub_Stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers)  
   *Integrated Linux distribution for threat hunting, enterprise security monitoring, and log management.* Elastic License 2.0. Bundles Suricata, Zeek, Wazuh, and OpenSearch with unified analyst web interfaces. 🧅
 
-- **[Security Monkey](https://github.com/Netflix/security_monkey)** [![GitHub stars](https://img.shields.io/github/stars/Netflix/security_monkey?style=social&color=white)](https://github.com/Netflix/security_monkey/stargazers)  
+- **[Security Monkey](https://github.com/Netflix/security_monkey)** [![GitHub_Stars](https://img.shields.io/github/stars/Netflix/security_monkey?style=social&color=white)](https://github.com/Netflix/security_monkey/stargazers)  
   *Legacy policy monitoring and change auditing architecture from Netflix.* Apache-2.0 licensed. Continuously tracks AWS/GCP policy modifications and insecure changes over time. 🐒
 
-- **[Cartography](https://github.com/lyft/cartography)** [![GitHub stars](https://img.shields.io/github/stars/lyft/cartography?style=social&color=white)](https://github.com/lyft/cartography/stargazers)  
+- **[Cartography](https://github.com/lyft/cartography)** [![GitHub_Stars](https://img.shields.io/github/stars/lyft/cartography?style=social&color=white)](https://github.com/lyft/cartography/stargazers)  
   *Graph-based asset discovery and relationship mapping tool from Lyft.* Apache-2.0 licensed. Ingests infrastructure assets into Neo4j to illustrate complex attack paths and multi-hop transactional access risks. 🗺️
 
-- **[CloudSploit](https://github.com/aquasecurity/cloudsploit)** [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/cloudsploit?style=social&color=white)](https://github.com/aquasecurity/cloudsploit/stargazers)  
+- **[CloudSploit](https://github.com/aquasecurity/cloudsploit)** [![GitHub_Stars](https://img.shields.io/github/stars/aquasecurity/cloudsploit?style=social&color=white)](https://github.com/aquasecurity/cloudsploit/stargazers)  
   *Cloud security posture and configuration scanner for AWS, Azure, GCP, and Oracle Cloud.* BSD-3-Clause licensed. Identifies misconfigurations and unauthorized public exposures. 🎯
 
-- **[RITA (Real Intelligence Threat Analytics)](https://github.com/activecm/rita)** [![GitHub stars](https://img.shields.io/github/stars/activecm/rita?style=social&color=white)](https://github.com/activecm/rita/stargazers)  
+- **[RITA (Real Intelligence Threat Analytics)](https://github.com/activecm/rita)** [![GitHub_Stars](https://img.shields.io/github/stars/activecm/rita?style=social&color=white)](https://github.com/activecm/rita/stargazers)  
   *Open-source network traffic analysis framework for detecting command and control (C2) communication.* LGPL-3.0 licensed. Parses Zeek transaction logs to uncover beaconing behavior and DNS tunneling. 📡
 
-- **[Clouditor](https://github.com/clouditor/clouditor)** [![GitHub stars](https://img.shields.io/github/stars/clouditor/clouditor?style=social&color=white)](https://github.com/clouditor/clouditor/stargazers)  
+- **[Clouditor](https://github.com/clouditor/clouditor)** [![GitHub_Stars](https://img.shields.io/github/stars/clouditor/clouditor?style=social&color=white)](https://github.com/clouditor/clouditor/stargazers)  
   *Continuous cloud assurance and automated compliance engine.* Apache-2.0 licensed. Features Cloud Compliance Language (CCL) to evaluate multi-cloud workloads against BSI C5 and CSA CCM frameworks. 📋
 
-- **[FinSight AI](https://github.com/AwaisRehman/finsight-ai)** [![GitHub stars](https://img.shields.io/github/stars/AwaisRehman/finsight-ai?style=social&color=white)](https://github.com/AwaisRehman/finsight-ai/stargazers)  
+- **[FinSight AI](https://github.com/AwaisRehman/finsight-ai)** [![GitHub_Stars](https://img.shields.io/github/stars/AwaisRehman/finsight-ai?style=social&color=white)](https://github.com/AwaisRehman/finsight-ai/stargazers)  
   *AI-powered financial transaction monitoring and analytics dashboard.* MIT licensed. Integrates MongoDB Atlas transaction streaming with LLaMA 3.3 70B for conversational transaction fraud screening and rule-based risk evaluation. 🤖
 
 ---
@@ -156,7 +156,7 @@ flowchart LR
 Contributions are warmly welcomed! 🌟 To suggest a product or open-source tool:
 
 1. 🍴 Fork this repository.
-2. 📝 Ensure entries conform to formatting standards (include exact pricing/trial bounds for SaaS, and valid star badge URLs for open source).
+2. 📝 Ensure entries conform to formatting standards (include exact pricing/trial bounds for SaaS, and valid Stars_Badge URLs for open source).
 3. 🚀 Open a Pull Request detailing the product's primary transaction security or posture capabilities.
 
 ---
